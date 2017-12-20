@@ -7,11 +7,11 @@ var Resolver;
 if (requirejs.entries['ember-resolver'] || requirejs.entries['ember-resolver/index']) {
   // ember-resolver is provided when the consuming
   // application uses ember-resolver@^2.0.0 from NPM
-  Resolver = require('ember-resolver')['default'];
+  Resolver = requirejs('ember-resolver')['default'];
 } else {
   // ember/resolver is provided when the consuming
   // application uses ember-resolver@^0.1.x from Bower
-  Resolver = require('ember/resolver')['default'];
+  Resolver = requirejs('ember/resolver')['default'];
 }
 
 Resolver.reopen({
